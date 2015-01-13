@@ -1,4 +1,4 @@
-package bandeira
+package band
 
 type Color int
 
@@ -19,6 +19,6 @@ const (
 )
 
 type Status struct {
-	Color
 	Region
+	Color
 }
