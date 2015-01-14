@@ -21,6 +21,7 @@ func DoRequest(w http.ResponseWriter, r *http.Request) {
 			Print(w, currentStatus)
 		}
 	}
+	http.Error(w, "method not allowed, try curl -X GET https://bandeiraeletrica.herokuapp.com/?pretty", http.StatusNotImplemented)
 }
 
 func Print(w http.ResponseWriter, status []Status) {
