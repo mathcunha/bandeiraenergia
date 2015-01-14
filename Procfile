@@ -1,1 +1,1 @@
-bandeiraenergia: bandeira
+web: bandeiraenergia
