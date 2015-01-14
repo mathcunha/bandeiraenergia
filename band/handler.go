@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"strings"
 )
 
 var currentStatus []Status
@@ -14,7 +15,11 @@ func Update(status []Status) {
 
 func DoRequest(w http.ResponseWriter, r *http.Request) {
 	if "GET" == r.Method {
-		Pretty(w, currentStatus)
+		if strings.Contains(r.RequestURI, "pretty") {
+			Pretty(w, currentStatus)
+		} else {
+			Print(w, currentStatus)
+		}
 	}
 }
 
