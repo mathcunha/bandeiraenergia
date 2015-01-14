@@ -1,0 +1,5 @@
+{
+	"ImportPath": "github.com/mathcunha/bandeiraenergia",
+	"GoVersion": "go1.3",
+	"Deps": []
+}
